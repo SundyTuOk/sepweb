@@ -1,0 +1,40 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory name="foo">
+    	<!-- ********************************* 数据库连接相关 ******************************** -->
+        <!-- 连接数据库Url -->
+        <property name="hibernate.connection.url">
+            jdbc:oracle:thin:@192.168.7.176:1521:orcl
+        </property>
+        <!-- 连接驱动 -->
+        <property name="hibernate.connection.driver_class">
+            oracle.jdbc.driver.OracleDriver
+        </property>
+        <!-- 用户名 -->
+        <property name="hibernate.connection.username">VESSCHOOL1760312</property>
+        <!-- 密码 -->
+        <property name="hibernate.connection.password">sa_123456</property>
+        <!-- 数据库方言 -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.OracleDialect
+        </property>
+        
+        <!-- ****************************** hibernate紧要配置 ****************************** -->
+        <!-- 配置 hibernate严格校验实体类与表之间的映射关系，不能通过实体类增加属性达到增加数据库列的操作 -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+        <!-- 事务不自动提交，需要手动提交事务 -->
+        <property name="hibernate.connection.autocommit">false</property>
+        
+        <!-- ****************************** hibernate无关紧要配置 ****************************** -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.default_schema">VESSCHOOL1760312</property>
+        <property name="hibernate.default_catalog">CATALOG_NAME</property>
+        <!-- 配置映射信息 -->
+        <mapping resource="com/sf/login/Users.hbm.xml" />
+        
+    </session-factory>
+</hibernate-configuration>
