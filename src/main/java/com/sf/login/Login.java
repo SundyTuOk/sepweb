@@ -11,6 +11,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.springframework.web.context.WebApplicationContext;
 
 import com.sf.commonbase.BaseHttpServlet;
 
@@ -22,14 +23,13 @@ public class Login extends BaseHttpServlet {
 			PrintWriter writer = rsp.getWriter();
 			getLogger().info("111111111111111111111");
 			
-			Configuration config = new Configuration().configure();
-			SessionFactory factory = config.buildSessionFactory();
+//			Configuration config = new Configuration().configure();
+//			SessionFactory factory = config.buildSessionFactory();
+			WebApplicationContext context = (WebApplicationContext) getServletContext().getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
+			SessionFactory factory = (SessionFactory) context.getBean("seesionFactory");
 			Session session = factory.openSession();
 			
 			Users users = session.get(Users.class, 24);
-//			session.l
-			
-			
 			
 			writer.write("hahahhahhhhhhhhhhhaaaaaaaa");
 			writer.write(users.USERS_NAME);

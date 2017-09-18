@@ -75,7 +75,6 @@
 	    <version>${springVersion}</version>
 	</dependency>
 	
-	
 	<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 	<dependency>
 	    <groupId>log4j</groupId>
@@ -87,8 +86,16 @@
 	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-core</artifactId>
-	    <version>5.1.0.Final</version>
+	    <version>${hibernateVersion}</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-c3p0</artifactId>
+	    <version>${hibernateVersion}</version>
+	</dependency>
+	
 	
 
 	<!-- https://mvnrepository.com/artifact/oracle/ojdbc14_g -->
@@ -98,15 +105,9 @@
 	    <version>10.2.0.4</version>
 	</dependency>
 
-
-
-
-
-
-	
     
   </dependencies>
   <build>
-    <finalName>savingEnergyPlatform-web</finalName>
+    <finalName>sepweb</finalName>
   </build>
 </project>
