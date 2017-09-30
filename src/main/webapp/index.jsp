@@ -1,5 +1,6 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Hello World! ${driverClass}</h2>
 </body>
 </html>
