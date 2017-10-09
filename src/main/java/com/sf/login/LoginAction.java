@@ -11,7 +11,7 @@ public class LoginAction implements ServletContextAware{
 
     private ServletContext servletContext;
 
-    private String driverClass;
+    public String driverClass;
 
     public String login(){
 //        WebApplicationContext context =
