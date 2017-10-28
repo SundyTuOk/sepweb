@@ -2,7 +2,6 @@ package com.sf.login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.charset.Charset;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,10 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.sf.commonbase.BaseHttpServlet;
+import com.sf.domain.Users;
+import com.sf.service.UserService;
 
 public class Login extends BaseHttpServlet {
 	
@@ -26,13 +26,22 @@ public class Login extends BaseHttpServlet {
 //			Configuration config = new Configuration().configure();
 //			SessionFactory factory = config.buildSessionFactory();
 			WebApplicationContext context = (WebApplicationContext) getServletContext().getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
-			SessionFactory factory = (SessionFactory) context.getBean("seesionFactory");
+			SessionFactory factory = (SessionFactory) context.getBean("sesionFactory");
 			Session session = factory.openSession();
 			
-			Users users = session.get(Users.class, 24);
+			UserService dao = (UserService) context.getBean("userService");
 			
-			writer.write("hahahhahhhhhhhhhhhaaaaaaaa");
-			writer.write(users.USERS_NAME);
+			Users user = dao.find(24);
+			
+//			List<Users> queryAll = dao.queryAll(Users.class);
+//			Users users = queryAll.get(0);
+//			System.out.println(users.getUsersName());
+			
+			
+//			Users users = session.get(Users.class, 24);
+			
+			writer.write("hahahhahhhhhhhhhhhaaaaaaaa<br/>");
+			writer.write(user.getUsersName());
 		} catch (IOException e) {
 			getLogger().error("错误");;
 		} catch (HibernateException e){
