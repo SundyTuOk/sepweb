@@ -176,6 +176,6 @@
     </dependency> -->
   </dependencies>
   <build>
-    <finalName>com.sf.sep.web</finalName>
+    <finalName>sepweb</finalName>
   </build>
 </project>
