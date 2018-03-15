@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/mybatis-3-mapper.dtd">
+<mapper namespace="com.sf.dao.UsersDAO">
+	<resultMap type="com.sf.domain.User" id="gatherMap">
+        <id column="users_id" property="userID"/>
+        <result column="users_name" property="userName"/>
+    </resultMap>
+
+    <select id="getUser" parameterType="int" resultMap="com.sf.domain.User">
+        select users_id as userId,users_name as userName
+        from users where users_id=#{id}
+    </select>
+    
+    
+</mapper>
