@@ -12,7 +12,7 @@
   <properties>
     <!-- <hibernateVersion>5.0.1.Final</hibernateVersion> -->
     <mybatis.version>3.2.2</mybatis.version>
-    <springVersion>4.3.10.RELEASE</springVersion>
+    <springVersion>4.2.6.RELEASE</springVersion>
   </properties>
   <dependencies>
     <dependency>
@@ -64,6 +64,11 @@
       <version>${springVersion}</version>
     </dependency>
     <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${springVersion}</version>
+    </dependency>
+    <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
@@ -100,11 +105,11 @@
 	</dependency>
 
 	<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
-	<dependency>
+	<!-- <dependency>
 	    <groupId>org.apache.struts</groupId>
 	    <artifactId>struts2-core</artifactId>
 	    <version>2.3.1</version>
-	</dependency>
+	</dependency> -->
 	
 
     <dependency>

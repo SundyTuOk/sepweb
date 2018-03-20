@@ -2,9 +2,7 @@ package com.sf.login;
 
 import javax.servlet.ServletContext;
 
-import org.apache.struts2.util.ServletContextAware;
-
-public class LoginAction implements ServletContextAware{
+public class LoginAction{
 
     private ServletContext servletContext;
 

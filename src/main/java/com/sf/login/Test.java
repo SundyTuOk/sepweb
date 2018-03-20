@@ -1,8 +1,5 @@
 package com.sf.login;
 
-import java.util.Map;
-
-import com.opensymphony.xwork2.ActionContext;
 
 public class Test {
 	
@@ -20,7 +17,7 @@ public class Test {
 //		System.out.println(users.getUserID());
 		
 		//第一种获取requet对象方法---HttpServletRequest对象的attributes(解耦)  
-		Map<String, Object> request = (Map)ActionContext.getContext().get("request"); 
+//		Map<String, Object> request = (Map)ActionContext.getContext().get("request"); 
 		System.out.println(userName);
 		System.out.println(passWord);
 		return "success";
