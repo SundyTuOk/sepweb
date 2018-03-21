@@ -18,7 +18,7 @@ public class Login {
 		System.out.println(password);
 		System.out.println(verificationCode);
 		UsersDAO dao = SpringContextUtil.getBean("UsersDAO");
-		System.out.println(dao.getUser(1).getUserName());
+		System.out.println(dao.getUserById(1).getUserName());
 //		response.sendRedirect("https://www.baidu.com");
 		return "login/login.jsp";
 	}

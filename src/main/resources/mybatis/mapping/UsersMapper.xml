@@ -3,11 +3,11 @@
 <mapper namespace="com.sf.login.dao.UsersDAO">
 	<resultMap type="com.sf.db.domain.User" id="gatherMap">
         <id column="users_id" property="userID"/>
-        <result column="users_name" property="userName"/>
+        <result column="users_name" property="username"/>
     </resultMap>
 
-    <select id="getUser" parameterType="int" resultType="com.sf.db.domain.User">
-        select users_id as userId,users_name as userName
+    <select id="getUserById" parameterType="int" resultType="com.sf.db.domain.User">
+        select *
         from users where users_id=#{id}
     </select>
     
