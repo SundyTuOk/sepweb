@@ -1,4 +1,4 @@
-package com.sf.domain;
+package com.sf.db.domain;
 
 /**
  * User entity. @author MyEclipse Persistence Tools

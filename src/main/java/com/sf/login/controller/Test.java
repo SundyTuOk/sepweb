@@ -1,4 +1,4 @@
-package com.sf.login;
+package com.sf.login.controller;
 
 
 public class Test {
