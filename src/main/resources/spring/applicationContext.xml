@@ -74,7 +74,7 @@
         <property name="dataSource" ref="jdbcDataSource"></property>
         <property name="configLocation" value="classpath:mybatis/mybatisConfig.xml"></property>
     </bean>
-	<bean id="UsersDAO" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+	<bean id="usersDAO" class="org.mybatis.spring.mapper.MapperFactoryBean" >
         <property name="mapperInterface" value="com.sf.login.dao.UsersDAO"></property>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>

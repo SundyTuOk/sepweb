@@ -6,11 +6,11 @@
 </head>
 <body>
 
-	<form action="login/loginCheck" method="post">
-		用户名：<input name="username">
-		密码：<input name="password">
-		验证码：<input name="verificationCode">
-		<input type="submit" value="Submit" />
+	<form action="login/login" method="post">
+		用户名：<input name="username"><br>
+		密码：<input name="password"><br>
+		验证码：<input name="verificationCode"><img alt="验证码" src="Kaptcha.jpg"><br>
+		<input type="submit" value="登录" />
 	</form>
 
 	<div>

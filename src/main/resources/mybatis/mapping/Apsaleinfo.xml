@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/mybatis-3-mapper.dtd">
+<mapper namespace="com.sf.login.dao.AmmeterDAO">
+	<resultMap type="com.sf.db.domain.Apsaleinfo" id="apsaleinfoMap">
+         <id column="saleinfonum" property="saleInfoNum"/>
+         <result column="ammeter_id" property="ammeterID"/>
+         <result column="ammeter_name" property="ammeterName"/>
+         <result column="ammeter_485address" property="ammeter_485Address"/>
+         <result column="times" property="times"/>
+         <result column="kind" property="kind"/>
+         <result column="qstvalue" property="qstValue"/>
+         <result column="hsyvalue" property="hsyValue"/>
+         <result column="users_id" property="usersId"/>
+         <result column="buytime" property="buyTime"/>
+         <result column="sendtime" property="sendTime"/>
+         <result column="status" property="status"/>
+         <result column="price" property="price"/>
+         <result column="thegross" property="thegross"/>
+         <result column="themoney" property="themoney"/>
+         <result column="studentid" property="studentID"/>
+         <result column="orderno" property="orderNo"/>
+         <result column="sign" property="sign"/>
+         <result column="users_name" property="usersName"/>
+         <result column="repeattime" property="repeatTime"/>
+         <result column="saletype" property="saleType"/>
+         
+        
+        
+        
+    </resultMap>
+
+</mapper>

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>华中师范大学校园节能监管平台</title>
+	<title>主页</title>
 	<meta name="description" content="User login page" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
 
 	
 <body>
-	msg:${errorMsg }
+	主页msg:${errorMsg }
 	<div class="footer" >
 		<div class="footer-inner">
 			<!-- #section:basics/footer -->
