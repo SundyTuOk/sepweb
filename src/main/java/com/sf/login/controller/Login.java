@@ -49,8 +49,16 @@ public class Login {
 			return mv;
 		}
 		String userNickName = (String) resultMap.get(Constant.LOGIN_USER_NICKNAME);
-		Cookie cookie = CommonUtils.getNewCookie(Constant.LOGIN_USER_NICKNAME,URLEncoder.encode(userNickName, Constant.ENCODING_STYLE));
-		response.addCookie(cookie);
+		// 回写cookie 昵称
+		Cookie nickNameCookie = CommonUtils.getNewCookie(Constant.LOGIN_USER_NICKNAME,URLEncoder.encode(userNickName, Constant.ENCODING_STYLE));
+		response.addCookie(nickNameCookie);
+		// 回写cookie 用户id
+		Cookie userIDCookie = CommonUtils
+				.getNewCookie(Constant.LOGIN_USER_ID
+						,URLEncoder.encode(loginService.getUserByUsername(username).getUserID().toString()
+								, Constant.ENCODING_STYLE));
+		response.addCookie(userIDCookie);
+		
 		mv.setViewName("login/homePage.jsp");
 		mv.addObject("errorMsg", "登录成功,你好:"+userNickName);
 		return mv;

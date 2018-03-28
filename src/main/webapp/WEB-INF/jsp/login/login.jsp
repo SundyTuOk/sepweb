@@ -3,31 +3,19 @@
 <html>
 <head>
 	<title>华中师范大学校园节能监管平台</title>
-	<meta name="description" content="User login page" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-
-	
 <body>
-	msg:${errorMsg }
-	<div class="footer" >
-		<div class="footer-inner">
-			<!-- #section:basics/footer -->
-			<div class="footer-content">
-				<span class="bigger-120">武汉盛帆电子股份有限公司版权所有 鄂ICP备06778号 电话：<span
-					class="blue bolder">027-81802522</span> </span> <span
-					class="action-buttons"> <a href="#"> <i
-						class="ace-icon fa fa-twitter-square light-blue bigger-150"></i> </a>
 
-					<a href="#"> <i
-						class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-				</a> <a href="#"> <i
-						class="ace-icon fa fa-rss-square orange bigger-150"></i> </a> </span>
-			</div>
-			<!-- /section:basics/footer -->
-		</div>
+	<form action="login/login" method="post">
+		用户名：<input name="username"><br>
+		密码：<input name="password"><br>
+		验证码：<input name="verificationCode"><img alt="验证码" src="Kaptcha.jpg"><br>
+		<input type="submit" value="登录" />
+	</form>
+	${errorMsg }
+
+	<div>
+		<span>武汉盛帆电子股份有限公司版权所有 鄂ICP备06778号 电话：<span>027-81802522</span> </span>
 	</div>
-
 </body>
 </html>
